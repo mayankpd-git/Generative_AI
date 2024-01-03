@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q & A Web App</title>
+</head>
+<body>
+    <h1>Q & A Web App</h1>
+    <form method="post">
+        <label for="query">Enter your question:</label>
+        <input type="text" id="query" name="query" required>
+        <button type="submit">Generate</button>
+    </form>
+    {% if query %}
+        <h2>Your question:</h2>
+        <p>{{ query }}</p>
+        <h2>Answer:</h2>
+        <p>{{ completion }}</p>
+    {% endif %}
+</body>
+</html>
